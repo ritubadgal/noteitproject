@@ -5,12 +5,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   flex: 1;
   padding: 20px;
-  gap: 20%;
+  gap: 10%;
 }
-.h1{
- text-align: center;
+.h1 {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-weight: 500px;
+ font-family: cursive;
 }
 .loginPageContentBaseContainer {
   display: flex;
@@ -57,16 +62,16 @@
   color: var(--blackColor);
   font-weight: 200;
 }
-.loginPageImageContainer {
-  display: flex;
-  background: aqua;
+/* .loginPageImageContainer {
+  
+ 
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 30px;
   background-color: var(--whiteColor);
   box-shadow: 0px 0px 20px var(--whiteColor);
-  border-radius: 20px;
+  
   border: 1px var(--borderColor);
 
-}
+} */

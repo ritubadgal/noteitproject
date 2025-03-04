@@ -9,13 +9,13 @@ function LoginPage() {
   const [email, setEmail] = useState("@gmail.com");
   return (
     <div className="loginPageBaseContainer">
-      {/* <h1 className="h1">NoteIt</h1> */}
-      <div className="loginPageImageContainer"></div>
+      <h1 className="h1">NoteIt</h1>
+    
       <div className="loginPageContentBaseContainer">
         <div className="loginPageContentTitleContainer">
-          <h1>NoteIt</h1>
+          <h1>Welcome</h1>
 
-          <h3>login </h3>
+          <h3>login here!</h3>
         </div>
         <div className="loginPageContentInputContainer">
           <CustomInput
@@ -36,7 +36,7 @@ function LoginPage() {
         </div>
         <div className="loginPageContentButtonContainer"></div>
         <div className="loginPageContentRegisterContainer">
-          <button>login</button>
+          <button>Sign in</button>
         </div>
       </div>
     </div>
