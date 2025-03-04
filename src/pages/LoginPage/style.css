@@ -1,0 +1,72 @@
+.loginPageBaseContainer {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to top, var(--baseColor), var(--secBaseColor));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 20px;
+  gap: 20%;
+}
+.h1{
+ text-align: center;
+}
+.loginPageContentBaseContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  background-color: var(--whiteColor);
+  box-shadow: 0px 0px 20px var(--whiteColor);
+  border-radius: 20px;
+  border: 1px var(--borderColor);
+}
+.loginPageContentTitleContainer {
+  font-size: smaller;
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.loginPageContentInputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px black;
+}
+.loginPageContentInputContainer {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.loginPageContentInputContainer input {
+  padding: 10px;
+  border-radius: 10px;
+}
+.loginPageContentButtonContainer {
+}
+.loginPageContentRegisterContainer button {
+  background-color: var(--baseColor);
+  border: 1;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  color: var(--blackColor);
+  font-weight: 200;
+}
+.loginPageImageContainer {
+  display: flex;
+  background: aqua;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  background-color: var(--whiteColor);
+  box-shadow: 0px 0px 20px var(--whiteColor);
+  border-radius: 20px;
+  border: 1px var(--borderColor);
+
+}
