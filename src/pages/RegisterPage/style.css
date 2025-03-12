@@ -3,26 +3,61 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  flex: 1;
-  padding: 0px;
-  gap: 30%;
+  justify-content: space-evenly;
+  padding: 100px;
+  gap: 10px;
   height: 100vh;
   width: 100%;
   background: linear-gradient(to bottom, var(--baseColor), var(--secBaseColor));
 }
-.RegisterPageContentBaseContainer{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
+.RegisterPageContentBaseContainer {
+  display: flex;
+  flex-direction: row;
+  /* gap: 10px; */
+  justify-content: space-between;
+  padding: 100px;
+  flex: 1;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.RegisterPageBaseContentContainer h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: cursive;
+  color: var(--secBaseColor);
+}
+.RegisterPageBaseContentContainer h3 {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 20px;
+  margin: 10px;
+  padding: 5px;
 }
 .RegisterPageBaseContentContainer {
-  /* background-color: var(--secBaseColor); */
-  padding: 50px;
+  /* background-color: var(--baseColor); */
+  padding: 0px 10px;
 }
-.RegisterPageImageContainer {
-  background-color: var(--secBaseColor);
-  padding: 50px;
+.RegisterPageImageContainer img {
+  width: 100%;
+  height: 40vh;
+  border-radius: 10px;
 }
-.RegisterPageContentTableContainer table{
-   table-border:1;
+.RegisterPageContentTableContainer table {
+  table-border: none;
+}
+.RegisterPageButtonContainer button{
+  background-color: rgb(110, 110, 238);
+  border: 1;
+  border-radius: 10px;
+  padding: 10px 100px;
+  margin: 20px;
+  color: var(--blackColor);
+  font-weight: 200;
+}
+.RegisterPageButtonContainer button:hover{
+  background-color: rgb(190, 118, 250);
+  cursor: pointer;
 }

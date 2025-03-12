@@ -1,0 +1,17 @@
+.customButtonBaseContainer{
+    font-size: 16px;
+    background-color: var(--secBaseColor);
+    padding: 5px 5px;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.customButtonBaseContainer:hover{
+background-color: var(--baseColor);
+color: black;
+border: 1px solid black;
+cursor: pointer;
+}

@@ -1,0 +1,32 @@
+.NavBarBaseContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+  margin: 0px;
+  gap: 20px;
+}
+.NavBarElement {
+   width: 0px; 
+  height: 25px;
+  background-color:var(--secBaseColor);
+  border-radius: 20px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+}
+.NavBarElement{
+  margin: 10px 30px;
+  padding: 15px;
+}
+.NavBarElement:hover {
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid black;
+  color: black;
+}
