@@ -1,0 +1,41 @@
+.NavBarBaseContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+  margin: 0px;
+  gap: 20px;
+}
+.NavBarBaseContainer{
+  display: flex;
+  padding: 10px 20px;
+}
+.NavBarLogoContainer{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.NavBarLinkContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 4;
+  font-size: 20px;
+  text-decoration: underline;
+}
+.NavBarProfileContainer{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+.NavBarLinkContainer p:hover{
+cursor: pointer;
+font-weight: bold;
+text-decoration: underline;
+color: blue;
+}

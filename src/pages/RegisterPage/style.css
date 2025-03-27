@@ -20,6 +20,7 @@
   position: relative;
   background-color: #ffffff;
   border-radius: 10px;
+  padding-bottom: 50px;
 }
 .RegisterPageBaseContentContainer h1 {
   display: flex;
@@ -48,7 +49,7 @@
 .RegisterPageContentTableContainer table {
   table-border: none;
 }
-.RegisterPageButtonContainer button{
+.RegisterPageButtonContainer button {
   background-color: rgb(110, 110, 238);
   border: 1;
   border-radius: 10px;
@@ -57,7 +58,7 @@
   color: var(--blackColor);
   font-weight: 200;
 }
-.RegisterPageButtonContainer button:hover{
+.RegisterPageButtonContainer button:hover {
   background-color: rgb(190, 118, 250);
   cursor: pointer;
 }

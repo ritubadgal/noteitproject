@@ -1,0 +1,31 @@
+.MainPageBaseContainer {
+  display: flex;
+  height: 100%;
+  gap: 20px;
+  padding: 20px;
+}
+.MainPageTitleContainer {
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex: 1;
+  border-radius: 20px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.mainPageTitleIconButton {
+  bottom: 4%;
+  right: 8%;
+  position: absolute;
+}
+.MainPageNotesContainer {
+  background-color: white;
+  display: flex;
+  flex: 3;
+  border-radius: 20px;
+}
+.mainPageTitleIconButton:hover{
+  cursor: pointer;
+  color:blue;
+}
+

@@ -1,18 +1,29 @@
 import ASSETS from "../../assets/images";
-import NavBar from "../NavBar/NavBar";
 import "./style.css";
-
+import NavBar from "../../components/NavBar/NavBar";
+import { Navigate, Outlet, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useState } from "react";
 function HomePage() {
+  const[name, setName]=useState("");
+  const navigate=useNavigate();
+  useEffect(() => {
+    const uid = localStorage.getItem("uid");
+    if (!uid) {
+      navigate("/login");
+    }
+  }, []);
   return (
     <div
       className="homePageBaseContainer"
       style={{ backgroundImage: `url(${ASSETS.backgroundImgNavBar})` }}
     >
-      <h2 className="HomePageHeading">Welcome write your NOTES here!</h2>
       <div className="navbarBaseContainer">
         <NavBar />
       </div>
-      <div className="homePageContentBaseContainer"></div>
+      <div className="homePageContentBaseContainer">
+        <Outlet />
+      </div>
     </div>
   );
 }

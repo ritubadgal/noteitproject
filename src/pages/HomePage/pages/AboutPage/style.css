@@ -1,0 +1,22 @@
+.aboutPageContainer{
+   
+    background: var(--baseColor);
+    
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px;
+   
+}
+.aboutPageContainer h1{
+    background-color: var(--secBaseColor);
+    color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+

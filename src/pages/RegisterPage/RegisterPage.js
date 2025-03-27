@@ -3,29 +3,58 @@ import CustomInput from "../../components/CustomInput/CustomInput";
 import CustomButton from "../../components/CustomButton/CustomButton.js";
 import COLOR from "../../config/COLOR.js";
 import "./style.css";
-import { auth } from "../../Firebase.js";
+import { auth, database } from "../../Firebase.js";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { set, ref } from "firebase/database";
 function RegisterPage() {
-  const[Name,setName]=useState("");
+  const [Name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-const [confirmPassword, setConfirmPassword]=useState("");
-const [buttonText,setButtonText]=useState("Register")
-const navigate=useNavigate();
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [buttonText, setButtonText] = useState("Register");
+  const navigate = useNavigate();
+  const saveUserDetails = (data) => {
+    set(ref(database, `users/${data.uid}`), data);
+    navigate("/");
+  };
   const handleRegister = async () => {
-    try{
-      if(email===""||password===""||confirmPassword===""||Name===""){
+    try {
+      if (
+        email == "" ||
+        password == "" ||
+        confirmPassword == "" ||
+        Name == ""
+      ) {
         alert("Please fill the fields");
-      }else if(password!==confirmPassword){
+        setName("");
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
+      } else if (password != confirmPassword) {
         alert("Password is not matching");
-      }else{
+        setName("");
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
+      } else {
         setButtonText("Please wait");
-        const response= await createUserWithEmailAndPassword(auth, email, password,confirmPassword);
+        const response = await createUserWithEmailAndPassword(
+          auth,
+          email,
+          password,
+          confirmPassword
+        );
         setButtonText("Register");
-        if(response.user.uid){
+        if (response.user.uid) {
+          const userData = {
+            uid: response.user.uid,
+            email: response.user.email,
+            name: Name,
+          };
+          saveUserDetails(userData);
           navigate("/");
-        }else {
+        } else {
           alert("Failed to register");
           setName("");
           setEmail("");
@@ -33,15 +62,14 @@ const navigate=useNavigate();
           setConfirmPassword("");
         }
       }
-    
-    } catch(err) {
+    } catch (err) {
       setButtonText("Register");
       setName("");
       setEmail("");
       setPassword("");
       setConfirmPassword("");
+      alert(err);
     }
-   
   };
 
   return (
@@ -91,7 +119,6 @@ const navigate=useNavigate();
                     placeholder="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                  
                   />
                 </td>
               </tr>

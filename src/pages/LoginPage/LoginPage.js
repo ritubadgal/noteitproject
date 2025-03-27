@@ -1,17 +1,41 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import COLOR from "../../config/COLOR.js";
 import "./style.css";
 import { FaUserAlt } from "react-icons/fa";
 import { FaKey } from "react-icons/fa";
 import CustomButton from "../../components/CustomButton/CustomButton.js";
+import { auth } from "../../Firebase.js";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
   const [email, setEmail] = useState("@gmail.com");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleLogin = () => {
-    
-  }
+  const handleLogin = async () => {
+    if (!email || !password) {
+      alert("Please enter email and password");
+      return;
+    }
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      if (userCredential.user.uid) {
+        localStorage.setItem("uid", userCredential.user.uid);
+        navigate("/home");
+      } else {
+        alert("Error In Login");
+      }
+    } catch (error) {
+      alert("login failed" + error.message);
+    }
+  };
 
   return (
     <div className="loginPageBaseContainer">
@@ -38,17 +62,17 @@ function LoginPage() {
             placeholder={"Enter Password"}
             Icon={FaKey}
             isSecureEntry={true}
+            inputValue={password}
+            onChangeText={(e) => {
+              setPassword(e.target.value);
+            }}
           />
         </div>
-        <div className="forgot">
+        {/* <div className="forgot">
           <a href="#">Forgot Password</a>
-        </div>
+        </div> */}
         <div className="flex2">
-          <CustomButton
-          title="login"
-          onclick={handleLogin}
-          // backgroundColor={COLOR.secBaseColoraseColor}
-          />
+          <CustomButton title="login" onClick={handleLogin} />
         </div>
         <div className="flex2">
           <h4>
