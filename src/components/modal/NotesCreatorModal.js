@@ -13,6 +13,7 @@ export const NotesCreatorModal = ({ closeModal }) => {
       setButtonText("Please wait..");
       await push(ref(database, `users/${localStorage.getItem("uid")}/notes`), {
         title: notesTitle,
+        content: "",
       });
       console.log("Notes:", { notesTitle });
       closeModal();
