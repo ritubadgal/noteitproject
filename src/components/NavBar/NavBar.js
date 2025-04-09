@@ -25,7 +25,8 @@ function NavBar() {
         )}
       </div>
       <div className="NavBarProfileContainer">
-      <FaUserCircle  size={30}/>
+      <FaUserCircle  size={30}
+      onClick={() => navigate("/profile")}/>
       </div>
     </div>
   );

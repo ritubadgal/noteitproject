@@ -1,0 +1,43 @@
+.profilePageBaseContainer{
+    display: flex;
+    background-color:white;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+    flex: 1;
+margin-top: 100px;
+width: 60%;
+justify-content: space-around;
+margin-left: 20%;
+}
+
+.profileDataContainer{
+    flex:1;
+    background-color:var(baseColor);
+    font-family: cursive;
+    border-radius: 10px;
+    width: 60%;
+    height: 40vh;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+}
+.profileDataContainer h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profileDataContainer p{
+font-size: 16px;
+margin: 8px 0;
+}
+.logout button{
+background-color: blue;
+color: white;
+padding: 8px 16px;
+border-radius: 5px;
+cursor: pointer;
+width: fit-content;
+}
+.logout button:hover{
+    background-color: rgb(68, 68, 240);
+}

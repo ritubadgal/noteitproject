@@ -62,18 +62,13 @@ function MainPage() {
               <div className="searchBarContainer">
                 <div className="searchInput">
                   <CustomInput
-              
-                  type="text"
-                  placeholder={"Search your notes"}
-                  Icon={IoSearchSharp }
-                  size={30}
-                
-                  />
-                  {/* <input
                     type="text"
                     placeholder={"Search your notes"}
-                    icon="IoSearchSharp "
-                  /> */}
+                    Icon={IoSearchSharp}
+                    size={30}
+                    
+                  />
+                  
                 </div>
               </div>
               {notesList.map((item) => {

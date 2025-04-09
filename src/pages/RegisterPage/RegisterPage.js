@@ -137,12 +137,15 @@ function RegisterPage() {
                 </td>
               </tr>
             </table>
+            
           </div>
 
           <div className="RegisterPageButtonContainer">
             <button onClick={handleRegister}>Register</button>
+            <h4>already have an account ?  <a href="login"> Sign in</a></h4>
           </div>
         </div>
+        
       </div>
     </div>
   );
