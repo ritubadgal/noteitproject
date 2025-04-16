@@ -26,12 +26,14 @@
   flex: 4;
   font-size: 20px;
   text-decoration: underline;
+  font-family: cursive;
 }
 .NavBarProfileContainer{
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: flex-end;
+  cursor: pointer;
 }
 .NavBarLinkContainer p:hover{
 cursor: pointer;

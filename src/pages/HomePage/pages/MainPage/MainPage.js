@@ -4,7 +4,7 @@ import { IoSearchSharp } from "react-icons/io5";
 import "../../../../components/modal/NotesCreatorModal.js";
 import NotesCreatorModal from "../../../../components/modal/NotesCreatorModal.js";
 import { useEffect, useState } from "react";
-import { onValue, ref, set } from "firebase/database";
+import { onValue, ref, remove, set } from "firebase/database";
 import { database } from "../../../../Firebase.js";
 import CustomButton from "../../../../components/CustomButton/CustomButton.js";
 import CustomInput from "../../../../components/CustomInput/CustomInput.js";
@@ -51,6 +51,10 @@ function MainPage() {
     );
   };
 
+  const handleRemoveNotes = async (key) => {
+    remove(ref(database, `users/${localStorage.getItem("uid")}/notes/${key}`));
+  };
+
   return (
     <div className="MainPageBaseContainer">
       <div className="MainPageTitleContainer">
@@ -66,13 +70,16 @@ function MainPage() {
                     placeholder={"Search your notes"}
                     Icon={IoSearchSharp}
                     size={30}
-                    
                   />
-                  
                 </div>
               </div>
               {notesList.map((item) => {
-                return <p onClick={() => setNoteContent(item)}>{item.title}</p>;
+                return (
+                  <div style={{display: "flex"}}>
+                    <p onClick={() => setNoteContent(item)}>{item.title}</p>
+                    <button onClick={() => handleRemoveNotes(item.key)}>Remove</button>
+                  </div>
+                );
               })}
             </>
           )}

@@ -47,7 +47,7 @@
   align-items: center;
   display: flex;
 }
-p:hover {
+.MainPageTitleContainer p:hover {
   cursor: pointer;
   background-color: var(--baseColor);
 }
