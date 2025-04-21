@@ -83,3 +83,14 @@ display: flex;
 flex: 4;
 
 }
+
+.notesRemoveButton, button{
+  background: rgb(22, 21, 21);
+  border-radius: 15px;
+  color: white;
+  padding: 2%;
+  
+}
+/* .notesRemoveButton button:hover{
+  background: var(--baseColor);
+} */

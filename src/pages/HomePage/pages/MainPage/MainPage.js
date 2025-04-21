@@ -77,7 +77,7 @@ function MainPage() {
                 return (
                   <div style={{display: "flex"}}>
                     <p onClick={() => setNoteContent(item)}>{item.title}</p>
-                    <button onClick={() => handleRemoveNotes(item.key)}>Remove</button>
+                    <button className="notesRemoveButton" onClick={() => handleRemoveNotes(item.key)}>Delete</button>
                   </div>
                 );
               })}
